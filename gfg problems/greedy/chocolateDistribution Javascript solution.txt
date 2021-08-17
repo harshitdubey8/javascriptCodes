@@ -1,0 +1,15 @@
+findMinDiff(arr,n,m){
+        arr.sort((a,b) => a-b);
+        
+        let diff = arr[m-1] - arr[0];
+        
+        for(let x=1;x<n;x++)
+        {
+            let diff1 = arr[x+(m-1)] -arr[x];
+            
+            if(diff > diff1)
+            {
+                diff = diff1;
+            }
+        }
+        return diff;
